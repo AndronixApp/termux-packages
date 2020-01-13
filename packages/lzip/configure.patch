@@ -1,0 +1,25 @@
+diff -u -r ../lzip-1.19/configure ./configure
+--- ../lzip-1.19/configure	2017-04-13 12:52:40.000000000 +0200
++++ ./configure	2017-05-02 10:44:44.249358716 +0200
+@@ -20,17 +20,10 @@
+ datarootdir='$(prefix)/share'
+ infodir='$(datarootdir)/info'
+ mandir='$(datarootdir)/man'
+-CXX=g++
+-CPPFLAGS=
+-CXXFLAGS='-Wall -W -O2'
+-LDFLAGS=
+-
+-# checking whether we are using GNU C++.
+-/bin/sh -c "${CXX} --version" > /dev/null 2>&1 ||
+-	{
+-	CXX=c++
+-	CXXFLAGS=-O2
+-	}
++CXX?=g++
++CPPFLAGS?=
++CXXFLAGS?='-Wall -W -O2'
++LDFLAGS?=
+ 
+ # Loop over all args
+ args=

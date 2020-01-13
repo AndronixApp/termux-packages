@@ -1,0 +1,24 @@
+--- ./CMakeLists.txt	2017-06-28 01:16:01.000000000 +0530
++++ ../CMakeLists.txt	2017-07-08 22:10:35.062570096 +0530
+@@ -272,7 +272,7 @@
+ if(_gRPC_PLATFORM_MAC)
+   set(_gRPC_ALLTARGETS_LIBRARIES ${CMAKE_DL_LIBS} m pthread)
+ elseif(UNIX)
+-  set(_gRPC_ALLTARGETS_LIBRARIES ${CMAKE_DL_LIBS} rt m pthread)
++  set(_gRPC_ALLTARGETS_LIBRARIES ${CMAKE_DL_LIBS} m)
+ endif()
+ 
+ if(WIN32 AND MSVC)
+@@ -813,12 +813,6 @@
+ target_link_libraries(gpr
+   ${_gRPC_ALLTARGETS_LIBRARIES}
+ )
+-if (_gRPC_PLATFORM_ANDROID)
+-  target_link_libraries(gpr
+-    android
+-    log
+-  )
+-endif (_gRPC_PLATFORM_ANDROID)
+ 
+ foreach(_hdr
+   include/grpc/support/alloc.h

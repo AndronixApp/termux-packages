@@ -1,0 +1,46 @@
+#!/bin/sh
+set -e -u
+
+show_help() {
+	echo 'Usage: pkg command [arguments]'
+	echo ''
+	echo 'A tool for managing packages. Commands:'
+	echo ''
+	echo '  files <packages>'
+	echo '  install <packages>'
+	echo '  list-all'
+	echo '  list-installed'
+	echo '  reinstall <packages>'
+	echo '  search <query>'
+	echo '  show <packages>'
+	echo '  uninstall <packages>'
+	echo '  upgrade'
+	exit 1
+}
+
+check_pkgcache() {
+	if [ -z "$(find @TERMUX_PREFIX@/var/cache/apt/pkgcache.bin -mmin -5)" ]; then
+		apt update
+	fi
+}
+
+if [ $# = 0 ]; then
+	show_help
+fi
+
+CMD="$1"
+shift 1
+
+case "$CMD" in
+	f*) dpkg -L "$@";;
+	h*) show_help;;
+	add|i*) check_pkgcache; apt install "$@";;
+	list-a*) apt list "$@";;
+	list-i*) apt list --installed "$@";;
+	rei*) apt install --reinstall "$@";;
+	se*) check_pkgcache; apt search "$@";;
+	sh*) apt show "$@";;
+	un*|rem*|rm|del*) apt remove "$@";;
+	up*) apt update; apt full-upgrade "$@";;
+	*) echo "Unknown command: '$CMD' (run 'pkg help' for usage information)"; exit 1;;
+esac

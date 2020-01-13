@@ -1,0 +1,20 @@
+diff -u -r ../rgbds-0.3.8/Makefile ./Makefile
+--- ../rgbds-0.3.8/Makefile	2018-12-10 23:19:36.000000000 +0000
++++ ./Makefile	2019-03-10 21:52:48.763105448 +0000
+@@ -11,7 +11,7 @@
+ Q		:= @
+ PREFIX		:= /usr/local
+ bindir		:= ${PREFIX}/bin
+-mandir		:= ${PREFIX}/man
++mandir		:= ${PREFIX}/share/man
+ STRIP		:= -s
+ BINMODE		:= 555
+ MANMODE		:= 444
+@@ -29,7 +29,6 @@
+ WARNFLAGS	:= -Wall
+ 
+ # Overridable CFLAGS
+-CFLAGS		:= -g
+ # Non-overridable CFLAGS
+ REALCFLAGS	:= ${CFLAGS} ${WARNFLAGS} -std=c99 -D_POSIX_C_SOURCE=200809L \
+ 		   -Iinclude -DBUILD_VERSION_STRING=\"${VERSION_STRING}\"

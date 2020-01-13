@@ -1,0 +1,111 @@
+diff -u -r ../node-v12.9.0/node.gyp ./node.gyp
+--- ../node-v12.9.0/node.gyp	2019-08-20 17:14:52.000000000 +0000
++++ ./node.gyp	2019-08-24 20:21:21.471982543 +0000
+@@ -1062,107 +1062,6 @@
+         } ],
+       ]
+     }, # specialize_node_d
+-    {
+-      'target_name': 'cctest',
+-      'type': 'executable',
+-
+-      'dependencies': [
+-        '<(node_lib_target_name)',
+-        'deps/histogram/histogram.gyp:histogram',
+-        'node_dtrace_header',
+-        'node_dtrace_ustack',
+-        'node_dtrace_provider',
+-      ],
+-
+-      'includes': [
+-        'node.gypi'
+-      ],
+-
+-      'include_dirs': [
+-        'src',
+-        'tools/msvs/genfiles',
+-        'deps/v8/include',
+-        'deps/cares/include',
+-        'deps/uv/include',
+-        'test/cctest',
+-      ],
+-
+-      'defines': [ 'NODE_WANT_INTERNALS=1' ],
+-
+-      'sources': [
+-        'src/node_snapshot_stub.cc',
+-        'src/node_code_cache_stub.cc',
+-        'test/cctest/gtest/gtest-all.cc',
+-        'test/cctest/gtest/gtest_main.cc',
+-        'test/cctest/node_test_fixture.cc',
+-        'test/cctest/node_test_fixture.h',
+-        'test/cctest/test_aliased_buffer.cc',
+-        'test/cctest/test_base64.cc',
+-        'test/cctest/test_node_postmortem_metadata.cc',
+-        'test/cctest/test_environment.cc',
+-        'test/cctest/test_linked_binding.cc',
+-        'test/cctest/test_per_process.cc',
+-        'test/cctest/test_platform.cc',
+-        'test/cctest/test_traced_value.cc',
+-        'test/cctest/test_util.cc',
+-        'test/cctest/test_url.cc',
+-      ],
+-
+-      'conditions': [
+-        [ 'node_use_openssl=="true"', {
+-          'defines': [
+-            'HAVE_OPENSSL=1',
+-          ],
+-        }],
+-        ['v8_enable_inspector==1', {
+-          'sources': [
+-            'test/cctest/test_inspector_socket.cc',
+-            'test/cctest/test_inspector_socket_server.cc'
+-          ],
+-          'defines': [
+-            'HAVE_INSPECTOR=1',
+-          ],
+-        }, {
+-           'defines': [
+-             'HAVE_INSPECTOR=0',
+-           ]
+-        }],
+-        ['OS=="solaris"', {
+-          'ldflags': [ '-I<(SHARED_INTERMEDIATE_DIR)' ]
+-        }],
+-        # Skip cctest while building shared lib node for Windows
+-        [ 'OS=="win" and node_shared=="true"', {
+-          'type': 'none',
+-        }],
+-        [ 'node_shared=="true"', {
+-          'xcode_settings': {
+-            'OTHER_LDFLAGS': [ '-Wl,-rpath,@loader_path', ],
+-          },
+-        }],
+-        [ 'node_report=="true"', {
+-          'sources': [
+-            'test/cctest/test_report_util.cc',
+-          ],
+-          'defines': [
+-            'NODE_REPORT',
+-            'NODE_ARCH="<(target_arch)"',
+-            'NODE_PLATFORM="<(OS)"',
+-          ],
+-          'conditions': [
+-            ['OS=="win"', {
+-              'libraries': [ 'Ws2_32' ],
+-            }],
+-          ],
+-        }],
+-        ['OS=="win"', {
+-          'libraries': [
+-            'Dbghelp.lib',
+-            'winmm.lib',
+-            'Ws2_32.lib',
+-          ],
+-        }],
+-      ],
+-    }, # cctest
+ 
+     # TODO(joyeecheung): do not depend on node_lib,
+     # instead create a smaller static library node_lib_base that does

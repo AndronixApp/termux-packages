@@ -1,0 +1,9 @@
+
+Welcome to Andronix!
+
+Discord:      https://discord.gg/kjdff
+Telegram:     https://t.me/andronixApp
+
+This is the command line that Andronix utilizes. This is forked from Termux and modified to automate things on Andronix. All the basic packages are already included with the bootstrap and using pkg or apt is not allowed since we are not using the official Termux repositories but you can search for packages and manually install them from-
+
+Packages - https://andronix.bintray.com/termux-packages-24
