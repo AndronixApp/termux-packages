@@ -1,6 +1,3 @@
-# Termux packages
-
- 
 <p align="center">
 <img src="https://github.com/imprakharshukla/termux-packages/blob/master/Assests/github_banner.png" height="715" width="805" />
 </p>
