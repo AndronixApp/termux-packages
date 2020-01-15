@@ -2,7 +2,7 @@
 
  
 <p align="center">
-<img src="https://github.com/imprakharshukla/termux-packages/blob/master/Assests/banner_readme.png.png" height="1080" width="1920" />
+<img src="https://github.com/imprakharshukla/termux-packages/blob/master/Assests/banner_readme.png.png" height="1920" width="1080" />
 </p>
 
 &nbsp;
