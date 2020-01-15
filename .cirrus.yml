@@ -123,6 +123,8 @@ task:
     BINTRAY_API_KEY: ENCRYPTED[28f40ebb6712a609b6505650f1012b4248669dfc291837532b1debdd032b2dc86acfe9ee244698e1a4e124917fc62f0b]
     BINTRAY_GPG_SUBJECT: andronixapp
     BINTRAY_GPG_PASSPHRASE: ENCRYPTED[8efa2723f616f08cc486b957dfe02f6c34acccd5e4b55d370496be54e5ae632630b284e04239955f5df250cc4d829845]
+    TERMUX_ANDROID_HOME: /data/data/studio.com.techriz.andronix/files/home
+    TERMUX_PREFIX: /data/data/studio.com.techriz.andronix/files/usr
 
   # Do not use built-in git client provided by Cirrus as it may
   # cause problems when determining changed files.
