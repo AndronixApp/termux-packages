@@ -1,4 +1,4 @@
-ERMUX_PKG_HOMEPAGE=https://packages.debian.org/debianutils
+TERMUX_PKG_HOMEPAGE=https://packages.debian.org/debianutils
 TERMUX_PKG_DESCRIPTION="Small utilities which are used primarily by the installation scripts of Debian packages"
 TERMUX_PKG_LICENSE="GPL-2.0"
 TERMUX_PKG_VERSION=4.9.1
