@@ -89,7 +89,7 @@ if [ -z "$BINTRAY_GPG_SUBJECT" ]; then
 fi
 
 # Packages are built and uploaded for Termux organisation.
-BINTRAY_SUBJECT="andronix"
+BINTRAY_SUBJECT="andronixapp"
 
 ###################################################################
 

@@ -9,3 +9,8 @@ Session.vim
 ### Vagrant ###
 scripts/*.log
 scripts/.vagrant/
+env.sh
+/scripts/env.sh
+env.sh
+
+env2.sh
