@@ -14,7 +14,7 @@
 This project contains all the essential packages and utilities required to build packages for **Termux integrated within Andronix**.
   <br></br>
 
-Find the packages @ [official Andronix Repository](https://androfiles.online)
+Find the packages @ [official Andronix Repository](https://androfile.online)
   <br></br>
 
 
