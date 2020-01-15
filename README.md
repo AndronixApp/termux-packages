@@ -2,8 +2,10 @@
 
  
 <p align="center">
-<img src="[https://github.com/imprakharshukla/termux-packages/blob/master/Assests/banner_readme.png.png](https://github.com/imprakharshukla/termux-packages/blob/master/Assests/banner_readme.png.png)" height="715" width="805" />
+<img src="https://github.com/imprakharshukla/termux-packages/blob/master/Assests/banner_readme.png.png" height="1920" width="1080" />
 </p>
+
+&nbsp;
 
 &nbsp;
 
