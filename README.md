@@ -22,9 +22,9 @@ Find the packages @ [official Andronix Repository](https://androfile.online)
 
   <br></br>
 
-Termux package management quick how-to available on https://wiki.termux.com/wiki/Package_Management.
+Termux package management quick how-to available on https://github.com/imprakharshukla/termux-packages/wiki.
 
-To learn about using our build environment, read the [Developer's Wiki].
+To learn about using our build environment, read the [Developer's Wiki](https://github.com/imprakharshukla/termux-packages/wiki).
 
   
 
