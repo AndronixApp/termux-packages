@@ -11,8 +11,8 @@ docker_builder:
   only_if: $CIRRUS_BRANCH == 'master'
 
   env:
-    DOCKER_USERNAME: xeffyr
-    DOCKER_PASSWORD: ENCRYPTED[abe4dc4418b40a4c5a0c1671e4018fd9cc3bcb811a71f87bdb35967ba721501f958d47d48a3d31ab9cac466b48f238a0]
+    DOCKER_USERNAME: andronixapp
+    DOCKER_PASSWORD: ENCRYPTED[e4856b6422e36ddce8a5cc2735b022f2391822350b2edc9b3046f89ac7f4f9085ccdaf71699861698f7be9e4bc50b4a0]
 
   script: |
     bash ./scripts/build/ci/cirrus-ci_dispatcher.sh --update-docker
