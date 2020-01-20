@@ -9,7 +9,7 @@
 &nbsp;
 
 
-[![build status](https://api.cirrus-ci.com/github/imprakharshukla/termux-packages.svg?branch=master)](https://cirrus-ci.com/imprakharshukla/termux-packages)
+[![build status](https://api.cirrus-ci.com/github/imprakharshukla/termux-packages.svg?branch=master)](https://cirrus-ci.com/andronixapp/termux-packages)
 
 This project contains all the essential packages and utilities required to build packages for **Termux integrated within Andronix**.
   <br></br>
