@@ -65,7 +65,7 @@
    65  rm /data/data/.built-packages/grep
    66  ./build-package.sh grep
    67  sl debs
-   68  ls debs
+   68  ls deb
    69  ls
    70  ./build-package.sh proot wget openssh pulseaudio bash tar nano apt pkg-config zsh pv dos2unix sed gerp -D
    71  ./build-package.sh proot wget openssh pulseaudio bash tar nano apt pkg-config zsh pv dos2unix sed grep -D
