@@ -62,7 +62,7 @@ else
 	# Changes in pull request are determined from commits between the
 	# top commit of base branch and latest commit of PR's branch.
 	GIT_CHANGES="${CIRRUS_BASE_SHA}..${CIRRUS_CHANGE_IN_REPO}"
-	echo "[*] Pull request: https://github.com/termux/termux-packages/pull/${CIRRUS_PR}"
+	echo "[*] Pull request: https://github.com/AndronixApp/termux-packages/pull/${CIRRUS_PR}"
 fi
 
 # Determine changes from commit range.
@@ -121,9 +121,9 @@ case "$1" in
 
 			cd "${REPO_DIR}/scripts"
 
-			docker build --tag termux/package-builder:latest .
+			docker build --tag andronixapp/package-builder:latest .
 			docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
-			docker push termux/package-builder:latest
+			docker push andronixapp/package-builder:latest
 		else
 			echo "[*] No need to update docker image."
 			exit 0
