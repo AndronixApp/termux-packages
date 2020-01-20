@@ -12,7 +12,7 @@ docker_builder:
 
   env:
     DOCKER_USERNAME: andronixapp
-    DOCKER_PASSWORD: ENCRYPTED[e4856b6422e36ddce8a5cc2735b022f2391822350b2edc9b3046f89ac7f4f9085ccdaf71699861698f7be9e4bc50b4a0]
+    DOCKER_PASSWORD: ENCRYPTED[f1e136ddb0b71978bd017089b1ba5101d43e263b5e22d3121055b948890110b8f98208eb26424ffe4bdbd99a7a0502b5]
 
   script: |
     bash ./scripts/build/ci/cirrus-ci_dispatcher.sh --update-docker
@@ -120,9 +120,9 @@ task:
 
   environment:
     BINTRAY_USERNAME: imprakharshukla
-    BINTRAY_API_KEY: ENCRYPTED[28f40ebb6712a609b6505650f1012b4248669dfc291837532b1debdd032b2dc86acfe9ee244698e1a4e124917fc62f0b]
+    BINTRAY_API_KEY: ENCRYPTED[6dd62eec639e531a066d198368d73a890d91f28d92652b4b7b4eed40a175c1bb13b43b66e74441c3d4b7e85d2eb3e808]
     BINTRAY_GPG_SUBJECT: andronixapp
-    BINTRAY_GPG_PASSPHRASE: ENCRYPTED[8efa2723f616f08cc486b957dfe02f6c34acccd5e4b55d370496be54e5ae632630b284e04239955f5df250cc4d829845]
+    BINTRAY_GPG_PASSPHRASE: ENCRYPTED[c766a2569ac7b479de6aba07da6ba146e90d96013cdc8a86d1d68e4d76e9e855c05d93f8727d2838140856ff85ac655a]
     TERMUX_ANDROID_HOME: /data/data/studio.com.techriz.andronix/files/home
     TERMUX_PREFIX: /data/data/studio.com.techriz.andronix/files/usr
 
